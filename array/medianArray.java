@@ -20,9 +20,13 @@ public double medianArray(int[] nums1, int[] nums2) {
     int n =  newArr.length;
 
     if(n%2 == 0){
-        return (newArr[n/2-1] + newArr[n/2])/2.0
+        return (newArr[n/2-1] + newArr[n/2])/2.0;
     }
     else {
         return newArr[n/2];
     }
+}
+
+public static void main(String[] args) {
+    return;
 }
