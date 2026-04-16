@@ -23,6 +23,18 @@ private int maximumProfit(int[] prices, int start, int end) {
     return profit;
 }
 
+//Greedy Approach
+public int profit(int[] prices){
+    int profit = 0;
+    for(int i = 1; i < prices.length; i++){
+        if(prices[i] > prices[i-1]){
+            profit += prices[i]-prices[i-1];
+        }
+    }
+    return profit;
+}
+
+
 public void main(String[] args) {
     int[] prices = {7,1,5,3,6,4};
     int result = maxProfit(prices);
