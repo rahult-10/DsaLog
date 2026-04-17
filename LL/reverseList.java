@@ -22,6 +22,17 @@ public ListNode reverseList(ListNode head) {
     return head;
 }
 
+public ListNode reverse(ListNode head) {
+    ListNode dummy = null;
+    while (head != null) {
+        ListNode current = head.next;
+        head.next = dummy;
+        dummy = head;
+        head = current;
+    }
+    return dummy;
+}
+
 public static void main(String[] args) {
     return;
 }
