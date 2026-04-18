@@ -53,6 +53,23 @@ public ListNode removeNthfromEnd(ListNode head, int n) {
     return head;
 }
 
+//M3->More optimized
+public ListNode removeNthFromEnd(ListNode head, int n) {4
+    ListNode dummy = new ListNode(0, head);
+    ListNode fast = head;
+    ListNode slow = head;
+    for(int i = 0; i <= n; i++){
+        fast = fast.next;
+    }
+    while(fast.next != null){
+        slow = slow.next;
+        fast = fast.next;
+    }
+    slow.next = slow.next.next;
+    return dummy.next;
+}
+
+
 public static void main(String[] args) {
     return;
 }
