@@ -54,7 +54,7 @@ public ListNode removeNthfromEnd(ListNode head, int n) {
 }
 
 //M3->More optimized
-public ListNode removeNthFromEnd(ListNode head, int n) {4
+public ListNode removeNthFromEnd(ListNode head, int n) {
     ListNode dummy = new ListNode(0, head);
     ListNode fast = head;
     ListNode slow = head;
