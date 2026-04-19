@@ -29,6 +29,40 @@ public boolean Palindrome(ListNode head){
 }
 
 
+//M2 -> optimized
+public boolean isPalindrome(ListNode head){
+    ListNode slow = head;
+    ListNode fast = head;
+    while(fast != null && fast.next != null){
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    ListNode newHead = reverse(slow.next);
+    ListNode first = head;
+    ListNode second = newHead;
+    while(second != null){
+        if(first.val != second.val){
+            reverse(newHead);
+            return false;
+        }
+        first = first.next;
+        second = second.next;
+    }
+    reverse(newHead);
+    return true;
+}
+
+public ListNode reverse(ListNode head){
+    ListNode dummy = null;
+    while (head != null) {
+        ListNode current = head.next;
+        head.next = dummy;
+        dummy = head;
+        head = current;
+    }
+    return dummy;
+}
+
 
 public static void main(String[] args) {
     
