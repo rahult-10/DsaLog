@@ -19,7 +19,7 @@ public boolean Palindrome(ListNode head){
     }
     temp = head;
     while(temp != null){
-        if(temp.val == st.peek()){
+        if(temp.val != st.peek()){
             return false;
         }
         temp = temp.next;
