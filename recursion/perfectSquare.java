@@ -17,7 +17,7 @@ private int solve(int n) {
 }
 
 public void main(String[] args) {
-    int n = 12;
+    int n = 13;
     int result = perfectSquare(n);
     System.out.println(result);
 }
