@@ -40,6 +40,24 @@ public int[] ngElement(int[] nums){
     return nge;
 }
 
+public int[] nextGreatElements(int[] nums) {
+    int n = nums.length;
+    int[] res = new int[n];
+    int[] st = new int[n];
+    Arrays.fill(res,-1);
+    int top = -1;
+    for(int i = 0; i < 2*n; i++){
+        int num = nums[i%n];
+        while(top >= 0 && nums[st[top]] < num){
+            res[st[top--]] = num;
+        }
+        if(i < n){
+            st[++top] = i;
+        }
+    }
+    return res;
+}
+
 public void main(String[] args) {
     int[] nums= {1,2,3,4,3};
     int[] res = nextGreaterElements(nums);
