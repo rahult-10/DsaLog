@@ -9,8 +9,20 @@ public boolean containsDuplicate(int[] nums) {
     return false;
 }
 
+public boolean containDuplicate(int[] nums) {
+    Arrays.sort(nums);
+    for(int i = 1; i < nums.length; i++){
+        if(nums[i] == nums[i-1]){
+            return true;
+        }
+    }
+    return false;
+}
+
+
 public void main(String[] args){
     int[] nums = {1,2,3,1};
     boolean result = containsDuplicate(nums);
-    System.out.println(result);
+    boolean res = containDuplicate(nums);
+    System.out.println(result + "," + res);
 }
