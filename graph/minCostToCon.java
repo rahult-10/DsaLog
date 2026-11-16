@@ -1,5 +1,6 @@
 // Solution 1 -> Kruskal's Algo + DSU
 // LC 1584. Min Cost to Connect All Points
+// gfg -> Minimum Cost to Connect Houses
 
 class Solution {
 
